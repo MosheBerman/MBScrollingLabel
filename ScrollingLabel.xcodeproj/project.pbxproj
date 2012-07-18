@@ -1,0 +1,297 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		46CB7F3715B75C6E00D4C16B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46CB7F3615B75C6E00D4C16B /* UIKit.framework */; };
+		46CB7F3915B75C6E00D4C16B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46CB7F3815B75C6E00D4C16B /* Foundation.framework */; };
+		46CB7F3B15B75C6E00D4C16B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46CB7F3A15B75C6E00D4C16B /* CoreGraphics.framework */; };
+		46CB7F4115B75C6E00D4C16B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46CB7F3F15B75C6E00D4C16B /* InfoPlist.strings */; };
+		46CB7F4315B75C6E00D4C16B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CB7F4215B75C6E00D4C16B /* main.m */; };
+		46CB7F4715B75C6E00D4C16B /* MBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CB7F4615B75C6E00D4C16B /* MBAppDelegate.m */; };
+		46CB7F4A15B75C6E00D4C16B /* MBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CB7F4915B75C6E00D4C16B /* MBViewController.m */; };
+		46CB7F4D15B75C6E00D4C16B /* MBViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46CB7F4B15B75C6E00D4C16B /* MBViewController_iPhone.xib */; };
+		46CB7F5015B75C6E00D4C16B /* MBViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46CB7F4E15B75C6E00D4C16B /* MBViewController_iPad.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		46CB7F3215B75C6E00D4C16B /* ScrollingLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollingLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		46CB7F3615B75C6E00D4C16B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		46CB7F3815B75C6E00D4C16B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		46CB7F3A15B75C6E00D4C16B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		46CB7F3E15B75C6E00D4C16B /* ScrollingLabel-Info.plist */ = {isa = PBXFileReference; path = "ScrollingLabel-Info.plist"; sourceTree = "<group>"; };
+		46CB7F4015B75C6E00D4C16B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		46CB7F4215B75C6E00D4C16B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		46CB7F4415B75C6E00D4C16B /* ScrollingLabel-Prefix.pch */ = {isa = PBXFileReference; path = "ScrollingLabel-Prefix.pch"; sourceTree = "<group>"; };
+		46CB7F4515B75C6E00D4C16B /* MBAppDelegate.h */ = {isa = PBXFileReference; path = MBAppDelegate.h; sourceTree = "<group>"; };
+		46CB7F4615B75C6E00D4C16B /* MBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBAppDelegate.m; sourceTree = "<group>"; };
+		46CB7F4815B75C6E00D4C16B /* MBViewController.h */ = {isa = PBXFileReference; path = MBViewController.h; sourceTree = "<group>"; };
+		46CB7F4915B75C6E00D4C16B /* MBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBViewController.m; sourceTree = "<group>"; };
+		46CB7F4C15B75C6E00D4C16B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MBViewController_iPhone.xib; sourceTree = "<group>"; };
+		46CB7F4F15B75C6E00D4C16B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MBViewController_iPad.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		46CB7F2F15B75C6E00D4C16B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46CB7F3715B75C6E00D4C16B /* UIKit.framework in Frameworks */,
+				46CB7F3915B75C6E00D4C16B /* Foundation.framework in Frameworks */,
+				46CB7F3B15B75C6E00D4C16B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		46CB7F2715B75C6E00D4C16B = {
+			isa = PBXGroup;
+			children = (
+				46CB7F3C15B75C6E00D4C16B /* ScrollingLabel */,
+				46CB7F3515B75C6E00D4C16B /* Frameworks */,
+				46CB7F3315B75C6E00D4C16B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		46CB7F3315B75C6E00D4C16B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46CB7F3215B75C6E00D4C16B /* ScrollingLabel.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		46CB7F3515B75C6E00D4C16B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46CB7F3615B75C6E00D4C16B /* UIKit.framework */,
+				46CB7F3815B75C6E00D4C16B /* Foundation.framework */,
+				46CB7F3A15B75C6E00D4C16B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		46CB7F3C15B75C6E00D4C16B /* ScrollingLabel */ = {
+			isa = PBXGroup;
+			children = (
+				46CB7F4515B75C6E00D4C16B /* MBAppDelegate.h */,
+				46CB7F4615B75C6E00D4C16B /* MBAppDelegate.m */,
+				46CB7F4815B75C6E00D4C16B /* MBViewController.h */,
+				46CB7F4915B75C6E00D4C16B /* MBViewController.m */,
+				46CB7F4B15B75C6E00D4C16B /* MBViewController_iPhone.xib */,
+				46CB7F4E15B75C6E00D4C16B /* MBViewController_iPad.xib */,
+				46CB7F3D15B75C6E00D4C16B /* Supporting Files */,
+			);
+			path = ScrollingLabel;
+			sourceTree = "<group>";
+		};
+		46CB7F3D15B75C6E00D4C16B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				46CB7F3E15B75C6E00D4C16B /* ScrollingLabel-Info.plist */,
+				46CB7F3F15B75C6E00D4C16B /* InfoPlist.strings */,
+				46CB7F4215B75C6E00D4C16B /* main.m */,
+				46CB7F4415B75C6E00D4C16B /* ScrollingLabel-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		46CB7F3115B75C6E00D4C16B /* ScrollingLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46CB7F5315B75C6E00D4C16B /* Build configuration list for PBXNativeTarget "ScrollingLabel" */;
+			buildPhases = (
+				46CB7F2E15B75C6E00D4C16B /* Sources */,
+				46CB7F2F15B75C6E00D4C16B /* Frameworks */,
+				46CB7F3015B75C6E00D4C16B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScrollingLabel;
+			productName = ScrollingLabel;
+			productReference = 46CB7F3215B75C6E00D4C16B /* ScrollingLabel.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46CB7F2915B75C6E00D4C16B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MB;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Moshe Berman";
+			};
+			buildConfigurationList = 46CB7F2C15B75C6E00D4C16B /* Build configuration list for PBXProject "ScrollingLabel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 46CB7F2715B75C6E00D4C16B;
+			productRefGroup = 46CB7F3315B75C6E00D4C16B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				46CB7F3115B75C6E00D4C16B /* ScrollingLabel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		46CB7F3015B75C6E00D4C16B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46CB7F4115B75C6E00D4C16B /* InfoPlist.strings in Resources */,
+				46CB7F4D15B75C6E00D4C16B /* MBViewController_iPhone.xib in Resources */,
+				46CB7F5015B75C6E00D4C16B /* MBViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		46CB7F2E15B75C6E00D4C16B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46CB7F4315B75C6E00D4C16B /* main.m in Sources */,
+				46CB7F4715B75C6E00D4C16B /* MBAppDelegate.m in Sources */,
+				46CB7F4A15B75C6E00D4C16B /* MBViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		46CB7F3F15B75C6E00D4C16B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46CB7F4015B75C6E00D4C16B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		46CB7F4B15B75C6E00D4C16B /* MBViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46CB7F4C15B75C6E00D4C16B /* en */,
+			);
+			name = MBViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		46CB7F4E15B75C6E00D4C16B /* MBViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46CB7F4F15B75C6E00D4C16B /* en */,
+			);
+			name = MBViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		46CB7F5115B75C6E00D4C16B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		46CB7F5215B75C6E00D4C16B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		46CB7F5415B75C6E00D4C16B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ScrollingLabel/ScrollingLabel-Prefix.pch";
+				INFOPLIST_FILE = "ScrollingLabel/ScrollingLabel-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		46CB7F5515B75C6E00D4C16B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ScrollingLabel/ScrollingLabel-Prefix.pch";
+				INFOPLIST_FILE = "ScrollingLabel/ScrollingLabel-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		46CB7F2C15B75C6E00D4C16B /* Build configuration list for PBXProject "ScrollingLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46CB7F5115B75C6E00D4C16B /* Debug */,
+				46CB7F5215B75C6E00D4C16B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46CB7F5315B75C6E00D4C16B /* Build configuration list for PBXNativeTarget "ScrollingLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46CB7F5415B75C6E00D4C16B /* Debug */,
+				46CB7F5515B75C6E00D4C16B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 46CB7F2915B75C6E00D4C16B /* Project object */;
+}
