@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBScrollingLabel.h"
 
 @interface MBViewController : UIViewController
+@property (weak, nonatomic) IBOutlet MBScrollingLabel *visuallyCreatedLabel;
+@property (weak, nonatomic) IBOutlet MBScrollingLabel *visualVerticallyScrollingLabel;
+
+
 
 @end

@@ -16,6 +16,7 @@
 		46CB7F4A15B75C6E00D4C16B /* MBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CB7F4915B75C6E00D4C16B /* MBViewController.m */; };
 		46CB7F4D15B75C6E00D4C16B /* MBViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46CB7F4B15B75C6E00D4C16B /* MBViewController_iPhone.xib */; };
 		46CB7F5015B75C6E00D4C16B /* MBViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46CB7F4E15B75C6E00D4C16B /* MBViewController_iPad.xib */; };
+		46CB7F5815B75CA600D4C16B /* MBScrollingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CB7F5715B75CA600D4C16B /* MBScrollingLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,16 +24,18 @@
 		46CB7F3615B75C6E00D4C16B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		46CB7F3815B75C6E00D4C16B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		46CB7F3A15B75C6E00D4C16B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		46CB7F3E15B75C6E00D4C16B /* ScrollingLabel-Info.plist */ = {isa = PBXFileReference; path = "ScrollingLabel-Info.plist"; sourceTree = "<group>"; };
+		46CB7F3E15B75C6E00D4C16B /* ScrollingLabel-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScrollingLabel-Info.plist"; sourceTree = "<group>"; };
 		46CB7F4015B75C6E00D4C16B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		46CB7F4215B75C6E00D4C16B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		46CB7F4415B75C6E00D4C16B /* ScrollingLabel-Prefix.pch */ = {isa = PBXFileReference; path = "ScrollingLabel-Prefix.pch"; sourceTree = "<group>"; };
-		46CB7F4515B75C6E00D4C16B /* MBAppDelegate.h */ = {isa = PBXFileReference; path = MBAppDelegate.h; sourceTree = "<group>"; };
+		46CB7F4415B75C6E00D4C16B /* ScrollingLabel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ScrollingLabel-Prefix.pch"; sourceTree = "<group>"; };
+		46CB7F4515B75C6E00D4C16B /* MBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBAppDelegate.h; sourceTree = "<group>"; };
 		46CB7F4615B75C6E00D4C16B /* MBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBAppDelegate.m; sourceTree = "<group>"; };
-		46CB7F4815B75C6E00D4C16B /* MBViewController.h */ = {isa = PBXFileReference; path = MBViewController.h; sourceTree = "<group>"; };
+		46CB7F4815B75C6E00D4C16B /* MBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBViewController.h; sourceTree = "<group>"; };
 		46CB7F4915B75C6E00D4C16B /* MBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBViewController.m; sourceTree = "<group>"; };
 		46CB7F4C15B75C6E00D4C16B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MBViewController_iPhone.xib; sourceTree = "<group>"; };
 		46CB7F4F15B75C6E00D4C16B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MBViewController_iPad.xib; sourceTree = "<group>"; };
+		46CB7F5615B75CA600D4C16B /* MBScrollingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBScrollingLabel.h; path = ScrollingLabel/ScrollLabel/MBScrollingLabel.h; sourceTree = "<group>"; };
+		46CB7F5715B75CA600D4C16B /* MBScrollingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBScrollingLabel.m; path = ScrollingLabel/ScrollLabel/MBScrollingLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +55,8 @@
 		46CB7F2715B75C6E00D4C16B = {
 			isa = PBXGroup;
 			children = (
-				46CB7F3C15B75C6E00D4C16B /* ScrollingLabel */,
+				46FF150A15C163C300627670 /* MBScrollingLabel */,
+				46CB7F3C15B75C6E00D4C16B /* Demo App Files */,
 				46CB7F3515B75C6E00D4C16B /* Frameworks */,
 				46CB7F3315B75C6E00D4C16B /* Products */,
 			);
@@ -76,7 +80,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		46CB7F3C15B75C6E00D4C16B /* ScrollingLabel */ = {
+		46CB7F3C15B75C6E00D4C16B /* Demo App Files */ = {
 			isa = PBXGroup;
 			children = (
 				46CB7F4515B75C6E00D4C16B /* MBAppDelegate.h */,
@@ -87,6 +91,7 @@
 				46CB7F4E15B75C6E00D4C16B /* MBViewController_iPad.xib */,
 				46CB7F3D15B75C6E00D4C16B /* Supporting Files */,
 			);
+			name = "Demo App Files";
 			path = ScrollingLabel;
 			sourceTree = "<group>";
 		};
@@ -99,6 +104,15 @@
 				46CB7F4415B75C6E00D4C16B /* ScrollingLabel-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		46FF150A15C163C300627670 /* MBScrollingLabel */ = {
+			isa = PBXGroup;
+			children = (
+				46CB7F5615B75CA600D4C16B /* MBScrollingLabel.h */,
+				46CB7F5715B75CA600D4C16B /* MBScrollingLabel.m */,
+			);
+			name = MBScrollingLabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +183,7 @@
 				46CB7F4315B75C6E00D4C16B /* main.m in Sources */,
 				46CB7F4715B75C6E00D4C16B /* MBAppDelegate.m in Sources */,
 				46CB7F4A15B75C6E00D4C16B /* MBViewController.m in Sources */,
+				46CB7F5815B75CA600D4C16B /* MBScrollingLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +305,7 @@
 				46CB7F5515B75C6E00D4C16B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
