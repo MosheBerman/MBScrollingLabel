@@ -1,0 +1,7 @@
+MBScrollingLabel is a drop-in replacement for UILabel which supports scrolling text.
+
+
+- ARC compatible.
+- Easy to extend.
+- Well commented.
+- Available wherever UILabel are sold.
