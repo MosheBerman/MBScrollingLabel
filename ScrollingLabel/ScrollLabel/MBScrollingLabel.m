@@ -9,35 +9,37 @@
 #import "MBScrollingLabel.h"
 
 @interface MBScrollingLabel ()
-    @property (strong, nonatomic) UILabel *innerLabel;
+@property (strong, nonatomic) UILabel *innerLabel;
+@property (assign) BOOL isAnimating;
 @end
 
 @implementation MBScrollingLabel
 
 @synthesize innerLabel = _innerLabel;
 
-
 /*
-
- Implementing awakeFromNib allows us to 
+ 
+ Implementing awakeFromNib allows us to
  use MBScrollingLabel with IB. Simply,
  any property that we want to apply to
- the inner label should have a custom 
- setter as well as a line here that looks 
+ the inner label should have a custom
+ setter as well as a line here that looks
  like this:
  
  self.{property} = super.{property};
  
- Then, implement the setter which will 
- take appropriate action on the inner 
+ Then, implement the setter which will
+ take appropriate action on the inner
  and outer labels.
  
-*/
+ */
 
 - (void)awakeFromNib{
     self.text = super.text;
     self.textColor = super.textColor;
     self.innerLabel.textAlignment = super.textAlignment;
+    _isAnimating = NO;
+    _shouldRepeat = NO;
 }
 
 - (void)drawRect:(CGRect)rect{
@@ -76,7 +78,7 @@
      we must ensure that the inner
      label isn't smaller than the
      outer one.
-    
+     
      */
     
     if (self.innerLabel.frame.size.width < self.frame.size.width) {
@@ -104,60 +106,107 @@
 
 - (void)scrollHorizontallyAtSpeed:(NSTimeInterval)duration{
     
-    //
-    //  Jump to the offscreen position
-    //
+    if ([self isAnimating]) {
+        return;
+    }
     
-    CGRect frame = self.innerLabel.frame;
-    frame.origin.x = frame.size.width;
-    self.innerLabel.frame = frame;
+    CGRect selfFrame = [self frame];
+    CGRect innerFrame = [[self innerLabel] frame];
     
-    //
-    //  animate
-    //
+    CGFloat start = selfFrame.size.width;
+    CGFloat middle = [self center].x;
+    CGFloat end = -innerFrame.size.width;
+
+    innerFrame.origin.x = start;
+    [[self innerLabel] setFrame:innerFrame];
     
-    [UIView animateWithDuration:duration delay:0.0 options: UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionRepeat animations:^{
-        
-        //  This assumes left to right text
-        //  and scrolling from right to left.
-        
-        CGRect frame = self.innerLabel.frame;
-        frame.origin.x = -self.innerLabel.frame.size.width;
-        self.innerLabel.frame = frame;
-        
-    } completion:^(BOOL finished) {
-        
-    }];
+    [self setIsAnimating:YES];
+    
+    [UIView animateWithDuration:duration/2
+                          delay:0.0
+                        options: UIViewAnimationCurveEaseOut
+                     animations:^{
+                         CGPoint center = [self innerLabel].center;
+                         center.x = middle;
+                         [[self innerLabel] setCenter:center];
+                     }
+    
+     
+                     completion:^(BOOL finished) {
+                         [UIView animateWithDuration:duration/2
+                                               delay:0.0
+                                             options: UIViewAnimationCurveEaseIn
+                                          animations:^{
+                                              CGRect newFrame = innerFrame;
+                                              newFrame.origin.x = end;
+                                              [[self innerLabel] setFrame:newFrame];
+                                          }
+                                          completion:^(BOOL finished) {
+                                              CGRect newFrame = innerFrame;
+                                              newFrame.origin.x = start;
+                                              [[self innerLabel] setFrame:newFrame];
+                                              
+                                              [self setIsAnimating:NO];
+                                              
+                                              if ([self shouldRepeat]) {
+                                                  [self scrollHorizontallyAtSpeed:duration];
+                                              }
+                                          }];
+                     }];
 }
 
 
 - (void)scrollVerticallyAtSpeed:(NSTimeInterval)duration{
     
-    //
-    //  Jump to the offscreen position
-    //
+    if ([self isAnimating]) {
+        return;
+    }
     
-    CGRect frame = self.innerLabel.frame;
-    frame.origin.y = frame.size.height;
-    self.innerLabel.frame = frame;
+    CGRect selfFrame = [self frame];
+    CGRect innerFrame = [[self innerLabel] frame];
     
-    //
-    //  animate
-    //
+    CGFloat start = selfFrame.size.height;
+    CGFloat middle = [self center].y;
+    CGFloat end = -innerFrame.size.height;
     
-    [UIView animateWithDuration:duration delay:0.0 options: UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionRepeat animations:^{
-        
-        //  This assumes left to right text
-        //  and scrolling from top to bottom.
-        
-        CGRect frame = self.innerLabel.frame;
-        frame.origin.y = -self.innerLabel.frame.size.height;
-        self.innerLabel.frame = frame;
-        
-    } completion:^(BOOL finished) {
-        
-    }];
+    innerFrame.origin.y = start;
+    [[self innerLabel] setFrame:innerFrame];
+    
+    [self setIsAnimating:YES];
+    
+    [UIView animateWithDuration:duration/2
+                          delay:0.0
+                        options: UIViewAnimationCurveEaseOut
+                     animations:^{
+                         CGPoint center = [self innerLabel].center;
+                         center.y = middle;
+                         [[self innerLabel] setCenter:center];
+                     }
+     
+     
+                     completion:^(BOOL finished) {
+                         [UIView animateWithDuration:duration/2
+                                               delay:0.0
+                                             options: UIViewAnimationCurveEaseIn
+                                          animations:^{
+                                              CGRect newFrame = innerFrame;
+                                              newFrame.origin.y = end;
+                                              [[self innerLabel] setFrame:newFrame];
+                                          }
+                                          completion:^(BOOL finished) {
+                                              CGRect newFrame = innerFrame;
+                                              newFrame.origin.y = start;
+                                              [[self innerLabel] setFrame:newFrame];
+                                              
+                                              [self setIsAnimating:NO];
+                                              
+                                              if ([self shouldRepeat]) {
+                                                  [self scrollVerticallyAtSpeed:duration];
+                                              }
+                                          }];
+                     }];
+
 }
 
- 
+
 @end

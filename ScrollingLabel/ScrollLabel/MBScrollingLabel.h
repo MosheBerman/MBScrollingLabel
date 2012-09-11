@@ -10,6 +10,8 @@
 
 @interface MBScrollingLabel : UILabel
 
+@property (nonatomic) BOOL shouldRepeat;
+
 //
 //  The speed value gets passed directly to the UIView animation
 //
