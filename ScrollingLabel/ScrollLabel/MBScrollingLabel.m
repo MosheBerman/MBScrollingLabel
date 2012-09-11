@@ -122,7 +122,11 @@
     
     [self setIsAnimating:YES];
     
-    [UIView animateWithDuration:duration/2
+    CGFloat durationPerPart = duration/11;
+    CGFloat inOutDuration = durationPerPart * 5;
+    CGFloat pauseDuration = durationPerPart * 1;
+    
+    [UIView animateWithDuration:inOutDuration
                           delay:0.0
                         options: UIViewAnimationCurveEaseOut
                      animations:^{
@@ -133,8 +137,8 @@
     
      
                      completion:^(BOOL finished) {
-                         [UIView animateWithDuration:duration/2
-                                               delay:0.0
+                         [UIView animateWithDuration:inOutDuration
+                                               delay:pauseDuration
                                              options: UIViewAnimationCurveEaseIn
                                           animations:^{
                                               CGRect newFrame = innerFrame;
